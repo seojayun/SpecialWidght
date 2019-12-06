@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.webview">
+<!--9. 나의 앱의 전체적인 관리를 하는 xml-->
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+<!--10.   <uses-permission android:name="android.permission.INTERNET"/>  -> 인터넷에서 불러오는 것을 허락하다.(보안설정)-->
+<!--13. file ->new image asset  ->앱 아이콘 변경 -->
+<!-- 12.   android:label="간단브라우저"  보통 이 부분은 밑에 라벨과 같이 변경해야한다. 이 부분은 설정 탭에들어가면 나오는 이름-->
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="간단브라우저"
+
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity"
+        android:label="재윤브라우져">
+<!--          11.         <activity android:name=".MainActivity"
+            >   안에  android:label="재윤브라우져" 작성하면 앱이름을 변경 가능하다-->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

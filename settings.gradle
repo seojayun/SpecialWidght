@@ -1,0 +1,2 @@
+include ':app', ':autoweiget', ':scrollview', ':slidingdrawer', ':viewflipper', ':webview'
+rootProject.name='SpecialWidght'

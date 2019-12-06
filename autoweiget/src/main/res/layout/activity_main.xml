@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <AutoCompleteTextView
+        android:id="@+id/autoEdt1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="단어를 입력하세요."
+        android:completionHint="원하는 단어를 선택하세요."
+        android:completionThreshold="1"
+        />
+    <!--1. android:completionHint : 힌트 밑에 뜨게 하는 텍스트-->
+    <!--2. android:completionThreshold="2" :  2글자썼을때 어뎁터가 나온다.  1넣으면 1글자에 어뎁터가 나온다.-->
+
+    <MultiAutoCompleteTextView
+        android:id="@+id/MultautoEdt1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="단어를 입력하세요."
+        android:completionHint="원하는 단어를 선택하세요."
+        android:completionThreshold="1"/>
+<!--3.MultiAutoCompleteTextView :  -->
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:max="100"
+        android:progress="20"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+<!--   1. ProgressBar : 기본 : 원형-->
+<!--   2.style="?android:attr/progressBarStyleHorizontal"-->
+<!--   2.android:max="100"-->
+<!--   2.android:progress="20"   2.모양이나 크기 등을 변경가능-->
+
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+<!--    시크바 : -->
+
+    <RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+<!--   레이팅바 : 별모양  주로 투표같은것 할 떄 자주사용함.-->
+</LinearLayout>
+
+

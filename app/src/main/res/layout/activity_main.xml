@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <Chronometer
+        android:id="@+id/chrono1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:format="예약에 걸린 시간 %s"
+        android:gravity="center"
+        android:textSize="20dp"/>
+
+
+
+    <RadioGroup
+        android:id="@+id/rdogroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible">
+        <RadioButton
+            android:id="@+id/rdoCal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="날짜설정"
+            android:checked="true"/>
+
+        //android:checked="true"  체크로 설정
+        <RadioButton
+            android:id="@+id/rdoTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="시간설정"/>
+    </RadioGroup>
+
+    <FrameLayout
+        android:id="@+id/farme1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        android:layout_weight="1">
+        // android:layout_weight="1" 프레임레이아웃만 줘서 리니어 레이아웃의 최소공간을 확보한다.
+        <DatePicker
+            android:id="@+id/dateView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:datePickerMode="spinner"
+           />
+        <TimePicker
+            android:id="@+id/tPicker"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="invisible"
+            android:timePickerMode="spinner"/>
+        //android:visibility="invisible" TimePicker 는 숨겨놓는다.
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#cccccc"
+        android:orientation="horizontal">
+
+
+
+        <TextView
+            android:id="@+id/tvResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#000000"/>
+    </LinearLayout>
+
+</LinearLayout>
+
+
+<!--//10월 17일 1교시 수업내용-->
+
+<!--<AnalogClock-->
+<!--android:layout_width="wrap_content"-->
+<!--android:layout_height="wrap_content"-->
+<!--    />-->
+<!--<DigitalClock-->
+<!--android:layout_width="wrap_content"-->
+<!--android:layout_height="wrap_content"-->
+<!--    />-->
+<!--    //요즘은 이러한 시계 위젯들은 잘 안쓰인다.-->
+<!--<Chronometer-->
+<!--android:layout_width="match_parent"-->
+<!--android:layout_height="wrap_content"-->
+<!--android:gravity="center"-->
+<!--android:textSize="20dp"-->
+<!--android:format="시간측정 : %s"/>-->
+<!--    //Chronometer 는 크로노미터 타이머 형식의 위젯이다.  android:format="시간측정 : %s"   s = 초-->
+<!--<TimePicker-->
+<!--android:layout_width="match_parent"-->
+<!--android:layout_height="wrap_content"-->
+<!--android:timePickerMode="spinner"/>-->
+<!--    //TimePicker는 시간을 조절하는 위젯 android:timePickerMode="spinner" 옛날버전-->
+<!--<DatePicker-->
+<!--android:layout_width="match_parent"-->
+<!--android:layout_height="wrap_content"-->
+<!--android:datePickerMode="spinner"-->
+<!--android:calendarViewShown="false"/>-->
+<!--    //DatePicker 는 날짜를 표시하고 조절하는 기능(달력)-->
+<!--    //android:datePickerMode="spinner" 타임피커 스피너처럼 모양이 바뀐다.-->
+<!--    //android:datePickerMode="spinner" 설정후에 android:calendarViewShown="false" 지정하면 옆에 달력이 없어진다.-->
+<!--<CalendarView-->
+<!--android:layout_width="match_parent"-->
+<!--android:layout_height="wrap_content"/>-->
+<!--    //CalendarView 는 달력을 표시하고 조절하는 기능(달력)  구버전임 설정이 없음-->
+
+
+
+<!--10월 17일 2~3교시 앱 내용-->
+
+<!--<Chronometer-->
+<!--android:id="@+id/chrono1"-->
+<!--android:layout_width="match_parent"-->
+<!--android:layout_height="wrap_content"-->
+<!--android:format="예약에 걸린 시간 %s"-->
+<!--android:gravity="center"-->
+<!--android:textSize="20dp"/>-->
+
+<!--<Button-->
+<!--android:id="@+id/btnStart"-->
+<!--android:layout_width="match_parent"-->
+<!--android:layout_height="wrap_content"-->
+<!--android:text="예약 시작"-->
+<!--android:textSize="20dp"/>-->
+
+<!--<RadioGroup-->
+<!--android:id="@+id/rdogroup"-->
+<!--android:layout_width="wrap_content"-->
+<!--android:layout_height="wrap_content">-->
+<!--<RadioButton-->
+<!--    android:id="@+id/rdoCal"-->
+<!--    android:layout_width="wrap_content"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:text="날짜설정 (캘린더뷰)"-->
+<!--    android:checked="true"/>-->
+
+<!--//android:checked="true"  체크로 설정-->
+<!--<RadioButton-->
+<!--    android:id="@+id/rdoTime"-->
+<!--    android:layout_width="wrap_content"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:text="시간설정"/>-->
+<!--</RadioGroup>-->
+
+<!--<FrameLayout-->
+<!--android:layout_width="match_parent"-->
+<!--android:layout_height="match_parent"-->
+<!--android:layout_weight="1">-->
+<!--// android:layout_weight="1" 프레임레이아웃만 줘서 리니어 레이아웃의 최소공간을 확보한다.-->
+<!--<CalendarView-->
+<!--    android:id="@+id/calView"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"/>-->
+<!--<TimePicker-->
+<!--    android:id="@+id/tPicker"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    android:visibility="invisible"-->
+<!--    android:timePickerMode="spinner"/>-->
+<!--//android:visibility="invisible" TimePicker 는 숨겨놓는다.-->
+<!--</FrameLayout>-->
+
+<!--<LinearLayout-->
+<!--android:layout_width="match_parent"-->
+<!--android:layout_height="wrap_content"-->
+<!--android:background="#cccccc"-->
+<!--android:orientation="horizontal">-->
+
+<!--<Button-->
+<!--    android:id="@+id/btnend"-->
+<!--    android:layout_width="wrap_content"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:text="예약완료"/>-->
+
+<!--<TextView-->
+<!--    android:id="@+id/tvResult"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:gravity="center"-->
+<!--    android:textColor="#000000"/>-->
+<!--</LinearLayout>-->

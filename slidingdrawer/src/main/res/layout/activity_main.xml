@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="여기는 서랍밖입니다."
+        android:textSize="20dp" />
+
+
+    <!--SlidingDrawer : 서랍을 여는듯한 위젯-->
+    <SlidingDrawer
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:content="@id/content"
+        android:handle="@id/handle"
+        >
+
+        <ImageView
+            android:id="@+id/handle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="서랍손잡이"
+            android:src="@drawable/icon2"/>
+
+        <LinearLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="#ff00ff">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/gingerbread" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="여기는 서랍안 함정발동" />
+
+            <SlidingDrawer
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:content="@id/con1"
+                android:handle="@id/btn2">
+                <LinearLayout
+                    android:id="@+id/con1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:background="#ffff00">
+
+                    <Button
+                        android:id="@+id/btn2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="이젠아니야"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="또 함정에 걸렸구나!"
+                        android:textSize="20dp"/>
+
+                </LinearLayout>
+
+            </SlidingDrawer>
+
+        </LinearLayout>
+
+
+
+    </SlidingDrawer>
+
+    <!--  android:content="@id/이름"    서랍안의 공간을 의미 - 리니어 레이아웃과 연결하였다.-->
+    <!--   android:handle="@id/이름"  서랍손잡이 부분을 의미 - 버튼과 연결하였다.-->
+    <!--  SlidingDrawer 외부에 무언가를 배치하면 그 공간을 제외한 나머지 공간만 서랍이 열리기 때문에 활용도가 낮다.  -->
+
+</LinearLayout>
